@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "yarn --cwd site next dev",
     "build": "yarn --cwd site next build",
-    "start": "yarn --cwd site next start"
+    "start": "yarn --cwd site next start",
+    "storybook": "yarn --cwd site storybook"
   },
   "devDependencies": {
     "prettier": "^2.2.1",

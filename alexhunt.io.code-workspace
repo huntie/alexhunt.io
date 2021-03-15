@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "extensions": {
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "esbenp.prettier-vscode",
+      "mikestead.dotenv"
+    ]
+  },
+  "settings": {
+    "editor.formatOnSave": true
+  }
+}

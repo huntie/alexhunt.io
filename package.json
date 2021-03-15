@@ -1,0 +1,22 @@
+{
+  "name": "alexhunt.io",
+  "version": "2.0.0",
+  "author": "Alex Hunt <hello@alexhunt.io>",
+  "description": "Personal website",
+  "homepage": "https://alexhunt.io",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/huntie/alexhunt.io"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "10.0.8",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
+  }
+}

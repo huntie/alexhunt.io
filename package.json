@@ -1,27 +1,17 @@
 {
-  "name": "alexhunt.io",
-  "version": "2.0.0",
-  "author": "Alex Hunt <hello@alexhunt.io>",
-  "description": "Personal website",
-  "homepage": "https://alexhunt.io",
   "private": true,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/huntie/alexhunt.io"
+  "engines": {
+    "yarn": "^1.22.0"
   },
+  "workspaces": [
+    "site"
+  ],
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "10.0.8",
-    "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "dev": "yarn --cwd site next dev",
+    "build": "yarn --cwd site next build",
+    "start": "yarn --cwd site next start"
   },
   "devDependencies": {
-    "@types/node": "^14.14.35",
-    "@types/react": "^17.0.3",
     "prettier": "^2.2.1",
     "prettier-plugin-organize-imports": "^1.1.1",
     "typescript": "^4.2.3"

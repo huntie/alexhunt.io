@@ -4,13 +4,15 @@
     "yarn": "^1.22.0"
   },
   "workspaces": [
-    "site"
+    "site",
+    "scripts/eslint"
   ],
   "scripts": {
     "dev": "yarn --cwd site next dev",
     "build": "yarn --cwd site next build",
     "start": "yarn --cwd site next start",
-    "storybook": "yarn --cwd site storybook"
+    "storybook": "yarn --cwd site storybook",
+    "lint": "yarn --cwd site lint"
   },
   "devDependencies": {
     "prettier": "^2.2.1",

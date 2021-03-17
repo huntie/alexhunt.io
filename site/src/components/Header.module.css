@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 22px;
+  background-color: var(--color-header);
+}
+
+@media (min-width: 480px) {
+  .header {
+    padding: 25px 30px;
+  }
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.button {
+  display: flex;
+  padding: 2px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.title:hover,
+.button:hover {
+  opacity: 0.8;
+}
+
+.icon {
+  fill: var(--color-text-primary);
+}

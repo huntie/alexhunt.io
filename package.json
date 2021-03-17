@@ -12,7 +12,9 @@
     "build": "yarn --cwd site next build",
     "start": "yarn --cwd site next start",
     "storybook": "yarn --cwd site storybook",
-    "lint": "yarn --cwd site lint"
+    "lint": "yarn --cwd site lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "devDependencies": {
     "prettier": "^2.2.1",

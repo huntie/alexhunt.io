@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inter', -apple-system, sans-serif;
 }
 
 a {
@@ -13,4 +12,20 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+:root {
+  --color-background: #fff;
+  --color-header: rgba(255, 255, 255, 0.9);
+  --color-text-primary: #37352f;
+}
+
+.dark-mode {
+  --color-background: #222;
+  --color-header: rgba(34, 34, 34, 0.9);
+  --color-text-primary: #eee;
+}
+
+body {
+  background-color: var(--color-background);
 }

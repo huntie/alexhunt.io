@@ -4,8 +4,7 @@ import Head from 'next/head';
 // organize-imports-ignore
 import '~styles/theme.css';
 import '~styles/globals.css';
-import 'react-notion-x/src/styles.css';
-import '~notion/style-overrides.css';
+import 'react-notion/src/styles.css';
 
 const App = ({ Component, pageProps }: AppProps) => {
   return (

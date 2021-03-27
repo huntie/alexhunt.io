@@ -1,10 +1,15 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
 import { NotionAPI } from 'notion-client';
-import type { ExtendedRecordMap } from 'notion-types';
-import { NotionRenderer } from 'react-notion-x';
+import type { BlockMapType } from 'react-notion';
+import { NotionRenderer } from 'react-notion';
 import Layout from '~components/Layout';
 import getNotesPageMapping from '~notion/getNotesPageMapping';
+
+type Props = {
+  title: string;
+  blockMap: BlockMapType;
+};
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const pages = await getNotesPageMapping();
@@ -15,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   };
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps<Props> = async context => {
   const { slug } = context.params;
   const notion = new NotionAPI();
 
@@ -25,24 +30,19 @@ export const getStaticProps: GetStaticProps = async context => {
   return {
     props: {
       title,
-      recordMap: await notion.getPage(id),
+      blockMap: (await notion.getPage(id)).block as BlockMapType,
     },
     revalidate: 10,
   };
 };
 
-type Props = {
-  title: string;
-  recordMap: ExtendedRecordMap;
-};
-
-const NotePage = ({ title, recordMap }: Props) => (
+const NotePage = ({ title, blockMap }: Props) => (
   <>
     <Head>
       <title>{title} | Alex Hunt</title>
     </Head>
     <Layout>
-      <NotionRenderer recordMap={recordMap} />
+      <NotionRenderer blockMap={blockMap} />
     </Layout>
   </>
 );

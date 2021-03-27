@@ -1,0 +1,11 @@
+:root {
+  --color-background: #fff;
+  --color-header: rgba(255, 255, 255, 0.95);
+  --color-text-primary: #37352f;
+}
+
+.dark-mode {
+  --color-background: #222;
+  --color-header: rgba(34, 34, 34, 0.95);
+  --color-text-primary: #eee;
+}

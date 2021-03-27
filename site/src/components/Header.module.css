@@ -10,7 +10,7 @@
   background-color: var(--color-header);
 }
 
-@media (min-width: 480px) {
+@media (--breakpoint-sm) {
   .header {
     padding: 25px 30px;
   }

@@ -2,6 +2,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
 // organize-imports-ignore
+import '~styles/theme.css';
 import '~styles/globals.css';
 import 'react-notion-x/src/styles.css';
 import '~notion/style-overrides.css';

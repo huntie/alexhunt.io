@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 0 var(--space-page-margin-xs);
+}
+
+@media (--breakpoint-sm) {
+  .container {
+    padding: 0 var(--space-page-margin-sm);
+    max-width: 580px;
+  }
+}
+
+@media (--breakpoint-md) {
+  .container {
+    padding: 0;
+    max-width: 700px;
+  }
+}

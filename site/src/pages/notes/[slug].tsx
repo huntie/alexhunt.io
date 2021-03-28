@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { NotionAPI } from 'notion-client';
 import type { BlockMapType } from 'react-notion';
 import { NotionRenderer } from 'react-notion';
+import Container from '~components/Container';
 import Layout from '~components/Layout';
 import getNotesPageMapping from '~notion/getNotesPageMapping';
 
@@ -42,7 +43,12 @@ const NotePage = ({ title, blockMap }: Props) => (
       <title>{title} | Alex Hunt</title>
     </Head>
     <Layout>
-      <NotionRenderer blockMap={blockMap} />
+      <article>
+        <Container>
+          <NotionRenderer blockMap={blockMap} />
+          <a href="/">Back to Notes</a>
+        </Container>
+      </article>
     </Layout>
   </>
 );

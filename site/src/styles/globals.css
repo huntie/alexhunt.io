@@ -2,7 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: var(--font-family-display);
 }
 
 a {

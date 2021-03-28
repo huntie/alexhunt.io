@@ -1,11 +1,35 @@
 :root {
-  --color-background: #fff;
+  /* Typography */
+  --font-family-display: Inter, -apple-system, sans-serif;
+  --font-family-body: Lora, -apple-system, sans-serif;
+
+  /* Layout */
+  --space-page-margin-xs: 22px;
+  --space-page-margin-sm: 30px;
+
+  /* Gruvbox palette (https://github.com/morhetz/gruvbox) */
+  --color-gruvbox-dark0-soft: #32302f;
+  --color-gruvbox-light1: #ebdbb2;
+  --color-gruvbox-light4: #a89984;
+  --color-gruvbox-bright-red: #fb4934;
+  --color-gruvbox-bright-green: #b8bb26;
+  --color-gruvbox-bright-yellow: #fabd2f;
+  --color-gruvbox-bright-purple: #d3869b;
+  --color-gruvbox-bright-aqua: #8ec07c;
+
+  /* Colours */
+  --color-background: white;
   --color-header: rgba(255, 255, 255, 0.95);
   --color-text-primary: #37352f;
+  --color-text-secondary: #b3b3b3;
+  --color-inline-code: var(--color-gruvbox-bright-red);
 }
 
 .dark-mode {
+  /* Colours */
   --color-background: #222;
   --color-header: rgba(34, 34, 34, 0.95);
   --color-text-primary: #eee;
+  --color-text-secondary: #eee;
+  --color-inline-code: var(--color-gruvbox-bright-aqua);
 }

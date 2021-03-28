@@ -1,0 +1,67 @@
+.notion {
+  color: var(--color-text-primary);
+}
+
+@media (--breakpoint-sm) {
+  .notion {
+    font-size: 1.125rem;
+  }
+}
+
+.notion-h1,
+.notion-h2,
+.notion-h3 {
+  font-family: var(--font-family-display);
+  line-height: 1.6;
+}
+
+.notion-h2 {
+  margin-top: 1.5em;
+}
+
+.notion-h3 {
+  margin-top: 2em;
+}
+
+.notion-text,
+.notion-list,
+.notion-quote {
+  font-family: var(--font-family-body);
+}
+
+.notion-text {
+  margin: 1em 0;
+  line-height: 1.8;
+}
+
+.notion-quote {
+  margin: 1em 0;
+  font-family: var(--font-family-body);
+  font-style: italic;
+  font-size: 140%;
+}
+
+.notion-callout {
+  margin: 1em 0;
+}
+
+.notion-callout-text {
+  font-family: var(--font-family-body);
+  font-size: 110%;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.notion-callout > div:first-child {
+  display: none;
+}
+
+.notion-code {
+  margin: 2em 0;
+  padding: 1.75em 1.5em;
+  font-size: 80% !important;
+}
+
+.notion-inline-code {
+  color: var(--color-inline-code);
+}

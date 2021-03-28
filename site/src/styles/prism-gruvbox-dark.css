@@ -1,0 +1,111 @@
+/**
+ * Gruvbox dark theme (https://github.com/morhetz/gruvbox)
+ *
+ * Adapted from:
+ * https://github.com/PrismJS/prism-themes/blob/295bc134135c37d802b6d545dd95a6e8dde40600/themes/prism-gruvbox-dark.css
+ *
+ * Copyright (c) 2015 PrismJS
+ * Licensed under MIT
+ */
+
+code[class*='language-'],
+pre[class*='language-'] {
+  color: var(--color-gruvbox-light1);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*='language-'] {
+  overflow: auto;
+}
+
+:not(pre) > code[class*='language-'],
+pre[class*='language-'] {
+  background: var(--color-gruvbox-dark0-soft);
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+  color: var(--color-gruvbox-light4);
+}
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+  color: var(--color-gruvbox-bright-red);
+}
+
+.token.operator,
+.token.punctuation,
+.token.attr-name {
+  color: var(--color-gruvbox-light4);
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+  color: var(--color-gruvbox-bright-yellow);
+}
+
+.token.entity,
+.token.number,
+.token.symbol {
+  color: var(--color-gruvbox-bright-purple);
+}
+
+.token.property,
+.token.constant,
+.token.variable {
+  color: var(--color-gruvbox-bright-red);
+}
+
+.token.string,
+.token.char {
+  color: var(--color-gruvbox-bright-green);
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+  color: var(--color-gruvbox-light4);
+}
+
+.token.url {
+  color: var(--color-gruvbox-bright-green);
+  text-decoration: underline;
+}
+
+.token.function {
+  color: var(--color-gruvbox-bright-yellow);
+}
+
+.token.regex {
+  background: var(--color-gruvbox-bright-green);
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.inserted {
+  background: var(--color-gruvbox-light4);
+}
+
+.token.deleted {
+  background: var(--color-gruvbox-bright-red);
+}

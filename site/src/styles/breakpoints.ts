@@ -3,6 +3,7 @@
  */
 export const breakpoints = {
   sm: 480,
+  md: 768,
 };
 
 /**

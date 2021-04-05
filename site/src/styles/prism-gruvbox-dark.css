@@ -52,6 +52,7 @@ pre[class*='language-'] {
   color: var(--color-gruvbox-light4);
 }
 
+.token.type-hint,
 .token.tag,
 .token.tag .punctuation,
 .token.doctype,
@@ -68,7 +69,7 @@ pre[class*='language-'] {
 .token.property,
 .token.constant,
 .token.variable {
-  color: var(--color-gruvbox-bright-red);
+  color: var(--color-gruvbox-light1);
 }
 
 .token.string,
@@ -87,7 +88,7 @@ pre[class*='language-'] {
 }
 
 .token.function {
-  color: var(--color-gruvbox-bright-yellow);
+  color: var(--color-gruvbox-bright-blue);
 }
 
 .token.regex {

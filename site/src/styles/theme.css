@@ -1,7 +1,7 @@
 :root {
   /* Typography */
-  --font-family-display: Inter, -apple-system, sans-serif;
-  --font-family-body: Lora, -apple-system, sans-serif;
+  --font-family-display: 'IBM Plex Sans', -apple-system, sans-serif;
+  --font-family-body: var(--font-family-display);
 
   /* Layout */
   --space-page-margin-xs: 22px;

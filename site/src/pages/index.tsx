@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { NotionAPI } from 'notion-client';
 import type { BlockMapType } from 'react-notion';
 import { NotionRenderer } from 'react-notion';
+import Hero from '~components/Hero';
 import Layout from '~components/Layout';
 
 const BIO_PAGE_ID = '3c84a17f3b1347c1ac8677d7b0037b43';
@@ -28,7 +29,9 @@ const Home = ({ bio }: Props) => (
       <title>Alex Hunt – Software developer &amp; occasional writer</title>
     </Head>
     <Layout>
-      <NotionRenderer blockMap={bio} />
+      <Hero>
+        <NotionRenderer blockMap={bio} />
+      </Hero>
     </Layout>
   </>
 );

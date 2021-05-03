@@ -1,3 +1,13 @@
+.root {
+  padding-bottom: 64px;
+}
+
+@media (--breakpoint-sm) {
+  .root {
+    padding-bottom: 74px;
+  }
+}
+
 .header {
   position: fixed;
   display: flex;
@@ -6,6 +16,8 @@
   left: 0;
   align-items: center;
   justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
   padding: 20px var(--space-page-margin-xs);
   background-color: var(--color-header);
   z-index: 100;
@@ -14,6 +26,12 @@
 @media (--breakpoint-sm) {
   .header {
     padding: 25px var(--space-page-margin-sm);
+  }
+}
+
+@media (min-width: 1080px) {
+  .header {
+    background-color: unset;
   }
 }
 

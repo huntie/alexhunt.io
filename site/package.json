@@ -18,6 +18,7 @@
     "lint": "eslint src/ --ext=.ts,.tsx"
   },
   "dependencies": {
+    "date-fns": "^2.19.0",
     "flat-cache": "^3.0.4",
     "invariant": "^2.2.4",
     "next": "10.0.8",

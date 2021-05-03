@@ -7,6 +7,8 @@
   --space-page-margin-xs: 22px;
   --space-page-margin-sm: 30px;
 
+  --color-grey-lightest: #ddd;
+
   /* Gruvbox palette (https://github.com/morhetz/gruvbox) */
   --color-gruvbox-dark0-soft: #32302f;
   --color-gruvbox-light1: #ebdbb2;
@@ -24,6 +26,7 @@
   --color-text-primary: #37352f;
   --color-text-secondary: #b3b3b3;
   --color-inline-code: var(--color-gruvbox-bright-red);
+  --color-divider: var(--color-grey-lightest);
 }
 
 .dark-mode {

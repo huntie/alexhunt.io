@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: var(--color-text-secondary);
+}
+
+@media (--breakpoint-sm) {
+  .footer {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+}
+
+.section:not(:last-child) {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  border-right: 1px solid var(--color-divider);
+}
+
+.item {
+  margin-right: 20px;
+}

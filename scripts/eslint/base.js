@@ -13,6 +13,12 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
       ],
       rules: {
+        // Disallow TODO and FIXME comments
+        'no-warning-comments': [
+          'warn',
+          { terms: ['todo', 'fixme'], location: 'start' },
+        ],
+
         // Allow use of `@ts-ignore` comments
         '@typescript-eslint/ban-ts-ignore': 'off',
 

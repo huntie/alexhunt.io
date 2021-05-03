@@ -13,14 +13,19 @@
 .notion-h3 {
   font-family: var(--font-family-display);
   line-height: 1.6;
+  white-space: pre-wrap;
 }
 
 .notion-h2 {
-  margin-top: 1.5em;
+  margin-top: 1.25em;
 }
 
 .notion-h3 {
-  margin-top: 2em;
+  margin-top: 1.5em;
+}
+
+.notion-h2 + .notion-h3 {
+  margin-top: 1em;
 }
 
 .notion-text,
@@ -32,6 +37,14 @@
 .notion-text {
   margin: 1em 0;
   line-height: 1.8;
+}
+
+:not(.notion-list) + .notion-list {
+  margin-top: 1em;
+}
+
+.notion-list > li {
+  padding: 0.25em 0;
 }
 
 .notion-quote {
@@ -56,10 +69,30 @@
   display: none;
 }
 
+.notion-image-caption {
+  text-align: center;
+  color: var(--color-text-secondary);
+}
+
+.notion-callout,
+.notion-image-inset,
+.notion-code {
+  border-radius: 6px;
+}
+
+@media (--breakpoint-sm) {
+  .notion-callout,
+  .notion-image-inset,
+  .notion-code {
+    border-radius: 8px;
+  }
+}
+
 .notion-code {
   margin: 2em 0;
   padding: 1.75em 1.5em;
-  font-size: 80% !important;
+  border-radius: 6px;
+  font-size: 75% !important;
 }
 
 .notion-inline-code {

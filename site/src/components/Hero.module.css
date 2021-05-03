@@ -1,0 +1,9 @@
+.hero {
+  margin: 40px 0;
+}
+
+@media (--breakpoint-sm) {
+  .hero {
+    margin: 70px 0;
+  }
+}

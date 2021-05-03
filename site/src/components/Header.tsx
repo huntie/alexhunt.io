@@ -26,19 +26,21 @@ type Props = {
 };
 
 const Header = ({ title, darkMode, onDarkModeChange }: Props) => (
-  <header className={styles.header}>
-    <a className={styles.title} href="/">
-      {title}
-    </a>
-    <button
-      className={styles.button}
-      type="button"
-      title="Tap to change light/dark appearance"
-      onClick={() => onDarkModeChange(!darkMode)}
-    >
-      <AppearanceIcon />
-    </button>
-  </header>
+  <div className={styles.root}>
+    <header className={styles.header}>
+      <a className={styles.title} href="/">
+        {title}
+      </a>
+      <button
+        className={styles.button}
+        type="button"
+        title="Tap to change light/dark appearance"
+        onClick={() => onDarkModeChange(!darkMode)}
+      >
+        <AppearanceIcon />
+      </button>
+    </header>
+  </div>
 );
 
 export default Header;

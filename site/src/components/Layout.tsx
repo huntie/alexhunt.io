@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import useDarkMode from 'use-dark-mode';
 import Header from './Header';
-import styles from './Layout.module.css';
 
 type Props = {
   children: ReactNode;
@@ -20,7 +19,7 @@ const Layout = ({ children }: Props) => {
         darkMode={darkMode.value}
         onDarkModeChange={darkMode.toggle}
       />
-      <div className={styles.content}>{children}</div>
+      {children}
     </>
   );
 };

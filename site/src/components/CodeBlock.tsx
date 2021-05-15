@@ -1,15 +1,18 @@
 import classNames from 'classnames';
 import { highlight, languages } from 'prismjs';
-import 'prismjs/components/prism-jsx';
 import { useCallback, useRef, useState } from 'react';
 import { Copy } from 'react-feather';
 import type { CustomBlockComponentProps } from 'react-notion';
 import useHasClipboard from '~hooks/useHasClipboard';
 import styles from './CodeBlock.module.css';
 
+const languageOverrides = {
+  javascript: 'jsx',
+};
+
 type Props = {
   code: string;
-  language: string;
+  language?: string;
 };
 
 const Code = ({ code, language }: Props) => {
@@ -18,9 +21,7 @@ const Code = ({ code, language }: Props) => {
   const [copied, setCopied] = useState(false);
   const timerRef = useRef(null);
 
-  const prismLanguage =
-    languages[language.toLowerCase()] || languages.javascript;
-  const langClass = `language-${language.toLowerCase()}`;
+  const langClass = language ? `language-${language}` : undefined;
 
   const handleClick = useCallback(async () => {
     clearTimeout(timerRef.current);
@@ -31,7 +32,7 @@ const Code = ({ code, language }: Props) => {
 
   return (
     <div className={classNames('notion-code-root', styles.root)}>
-      <pre className={classNames('notion-code', styles.pre, langClass)}>
+      <pre className={classNames('notion-code', styles.content, langClass)}>
         {hasClipboard ? (
           <button
             className={styles.copyButton}
@@ -46,7 +47,10 @@ const Code = ({ code, language }: Props) => {
           ref={codeRef}
           className={langClass}
           dangerouslySetInnerHTML={{
-            __html: highlight(code, prismLanguage, language),
+            __html:
+              language in languages
+                ? highlight(code, languages[language], language)
+                : code,
           }}
         />
       </pre>
@@ -57,10 +61,14 @@ const Code = ({ code, language }: Props) => {
 const CodeBlock = ({ blockValue }: CustomBlockComponentProps<'code'>) => {
   if (blockValue.properties.title) {
     const content = blockValue.properties.title[0][0];
-    const language = blockValue.properties.language[0][0];
+    const language = blockValue.properties.language[0][0]?.toLowerCase();
 
     return (
-      <Code key={blockValue.id} language={language ?? ''} code={content} />
+      <Code
+        key={blockValue.id}
+        language={languageOverrides[language] ?? language}
+        code={content}
+      />
     );
   }
 

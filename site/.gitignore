@@ -8,6 +8,8 @@
 
 # Build output
 /.cache
+/public/static/
+!/public/static/.gitkeep
 
 # Cache and log files
 npm-debug.log*

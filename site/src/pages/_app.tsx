@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 
 // organize-imports-ignore
 import '~styles/theme.css';
@@ -20,18 +19,7 @@ import 'prismjs/components/prism-python';
 import 'prismjs/components/prism-typescript';
 
 const App = ({ Component, pageProps }: AppProps) => {
-  return (
-    <>
-      <Head>
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap"
-        />
-      </Head>
-      <Component {...pageProps} />
-    </>
-  );
+  return <Component {...pageProps} />;
 };
 
 export default App;

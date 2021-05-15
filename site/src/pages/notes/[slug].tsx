@@ -1,12 +1,12 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
 import Head from 'next/head';
-import { NotionAPI } from 'notion-client';
 import type { BlockMapType } from 'react-notion';
-import { NotionRenderer } from 'react-notion';
 import ArticleHeader from '~components/ArticleHeader';
 import Container from '~components/Container';
 import Layout from '~components/Layout';
+import NotionRenderer from '~components/NotionRenderer';
 import getNotesPageMapping from '~notion/getNotesPageMapping';
+import getPage from '~notion/getPage';
 
 type Props = {
   title: string;
@@ -25,7 +25,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps<Props> = async context => {
   const { slug } = context.params;
-  const notion = new NotionAPI();
 
   const pages = await getNotesPageMapping();
   const { id, title, date } = pages['/notes/' + slug];
@@ -34,7 +33,7 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
     props: {
       title,
       date,
-      blockMap: (await notion.getPage(id)).block as BlockMapType,
+      blockMap: (await getPage(id)).block as BlockMapType,
     },
     revalidate: 10,
   };

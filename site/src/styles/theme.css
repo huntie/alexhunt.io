@@ -25,6 +25,7 @@
   --color-header: rgba(255, 255, 255, 0.95);
   --color-text-primary: #37352f;
   --color-text-secondary: #b3b3b3;
+  --color-code-background: var(--color-gruvbox-dark0-soft);
   --color-inline-code: var(--color-gruvbox-bright-red);
   --color-divider: var(--color-grey-lightest);
 }

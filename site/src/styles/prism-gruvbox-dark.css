@@ -28,7 +28,7 @@ pre[class*='language-'] {
 
 :not(pre) > code[class*='language-'],
 pre[class*='language-'] {
-  background: var(--color-gruvbox-dark0-soft);
+  background: var(--color-code-background);
 }
 
 .token.comment,

@@ -21,6 +21,7 @@
     "lint": "eslint src/ --ext=.ts,.tsx"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "date-fns": "^2.19.0",
     "flat-cache": "^3.0.4",
     "invariant": "^2.2.4",
@@ -31,12 +32,14 @@
     "prismjs": "^1.23.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
+    "react-feather": "^2.0.9",
     "react-notion": "^0.9.3",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/register": "^7.13.8",
+    "@types/classnames": "^2.3.1",
     "@types/flat-cache": "^2.0.0",
     "@types/invariant": "^2.2.34",
     "@types/node": "^14.14.35",

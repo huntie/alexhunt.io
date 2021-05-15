@@ -1,0 +1,33 @@
+.root {
+  position: relative;
+}
+
+.pre {
+  padding-right: 8em;
+}
+
+.copyButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  bottom: 1.2em;
+  right: 0.8em;
+  padding: 0.5em 1em;
+  border: 0;
+  outline: none;
+  background: var(--color-code-background);
+  font-family: var(--font-family-body);
+  color: inherit;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.copyButton:hover {
+  opacity: 1;
+}
+
+.copyIcon {
+  width: 1.2em;
+  margin-right: 8px;
+  outline: var(--color-gruvbox-light1);
+}

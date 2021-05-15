@@ -88,8 +88,12 @@
   }
 }
 
-.notion-code {
+.notion-code-root {
   margin: 2em 0;
+}
+
+.notion-code {
+  margin: 0;
   padding: 1.75em 1.5em;
   border-radius: 6px;
   font-size: 75% !important;

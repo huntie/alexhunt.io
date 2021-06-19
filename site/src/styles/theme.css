@@ -7,8 +7,6 @@
   --space-page-margin-xs: 22px;
   --space-page-margin-sm: 30px;
 
-  --color-grey-lightest: #ddd;
-
   /* Gruvbox palette (https://github.com/morhetz/gruvbox) */
   --color-gruvbox-dark0-soft: #32302f;
   --color-gruvbox-light1: #ebdbb2;
@@ -21,20 +19,25 @@
   --color-gruvbox-bright-aqua: #8ec07c;
 
   /* Colours */
+  --color-grey-lightest: #ddd;
   --color-background: white;
   --color-header: rgba(255, 255, 255, 0.95);
   --color-text-primary: #37352f;
   --color-text-secondary: #b3b3b3;
   --color-code-background: var(--color-gruvbox-dark0-soft);
   --color-inline-code: var(--color-gruvbox-bright-red);
+  --color-link-underline: var(--color-grey-lightest);
   --color-divider: var(--color-grey-lightest);
 }
 
 .dark-mode {
   /* Colours */
+  --color-grey-lightest: #777;
   --color-background: #222;
   --color-header: rgba(34, 34, 34, 0.95);
   --color-text-primary: #eee;
   --color-text-secondary: #eee;
   --color-inline-code: var(--color-gruvbox-bright-aqua);
+  --color-link-underline: var(--color-grey-lightest);
+  --color-divider: var(--color-grey-lightest);
 }

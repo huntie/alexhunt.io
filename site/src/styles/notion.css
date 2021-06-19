@@ -8,6 +8,10 @@
   }
 }
 
+.notion-blank {
+  display: none;
+}
+
 .notion-h1,
 .notion-h2,
 .notion-h3 {

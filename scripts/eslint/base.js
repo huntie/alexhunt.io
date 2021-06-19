@@ -25,6 +25,12 @@ module.exports = {
         // Allow return types to be inferred
         '@typescript-eslint/explicit-function-return-type': 'off',
 
+        // Allow unused vars beginning with an underscore
+        '@typescript-eslint/no-unused-vars': [
+          'warn',
+          { argsIgnorePattern: '^_' },
+        ],
+
         // Allow implicit types at module boundaries
         '@typescript-eslint/explicit-module-boundary-types': 'off',
 

@@ -1,0 +1,7 @@
+.heading {
+  color: var(--color-text-primary);
+}
+
+.item {
+  margin-bottom: 20px;
+}

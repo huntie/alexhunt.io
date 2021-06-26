@@ -1,0 +1,12 @@
+.link {
+  align-self: flex-start;
+  border-bottom: 2px solid var(--color-link-underline);
+  margin-top: 40px;
+  font-size: 1.125rem;
+  color: var(--color-text-primary);
+  transition: border-color 0.3s;
+}
+
+.link:hover {
+  border-bottom-color: var(--color-text-primary);
+}

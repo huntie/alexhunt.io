@@ -5,6 +5,7 @@ import ArticleHeader from '~components/ArticleHeader';
 import Container from '~components/Container';
 import Layout from '~components/Layout';
 import NotionRenderer from '~components/NotionRenderer';
+import UnderlineLink from '~components/UnderlineLink';
 import getNotesPageMapping from '~notion/getNotesPageMapping';
 import getPage from '~notion/getPage';
 
@@ -49,7 +50,7 @@ const NotePage = ({ title, date, blockMap }: Props) => (
         <Container>
           <ArticleHeader title={title} date={date} />
           <NotionRenderer blockMap={blockMap} />
-          <a href="/">Back to Notes</a>
+          <UnderlineLink label="Back to Home" href="/" />
         </Container>
       </article>
     </Layout>

@@ -10,6 +10,7 @@
   --color-grey-lightest: #ddd;
 
   /* Gruvbox palette (https://github.com/morhetz/gruvbox) */
+  --color-gruvbox-dark0: #282828;
   --color-gruvbox-dark0-soft: #32302f;
   --color-gruvbox-light1: #ebdbb2;
   --color-gruvbox-light4: #a89984;
@@ -36,5 +37,6 @@
   --color-header: rgba(34, 34, 34, 0.95);
   --color-text-primary: #eee;
   --color-text-secondary: #eee;
+  --color-code-background: var(--color-gruvbox-dark0);
   --color-inline-code: var(--color-gruvbox-bright-aqua);
 }

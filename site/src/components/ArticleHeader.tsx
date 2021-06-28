@@ -6,7 +6,7 @@ type Props = {
   date: string;
 };
 
-const ArticleHeader = ({ title, date }: Props) => (
+const ArticleHeader = ({ title, date }: Props): JSX.Element => (
   <div className={styles.root}>
     <h1 className={styles.title}>{title}</h1>
     <div className={styles.meta}>

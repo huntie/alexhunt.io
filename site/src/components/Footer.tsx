@@ -7,7 +7,11 @@ type Props = {
   changelogUrl: string;
 };
 
-const Footer = ({ copyrightName, repositoryUrl, changelogUrl }: Props) => (
+const Footer = ({
+  copyrightName,
+  repositoryUrl,
+  changelogUrl,
+}: Props): JSX.Element => (
   <Container>
     <footer className={styles.footer}>
       <div className={styles.section}>

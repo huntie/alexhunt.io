@@ -6,7 +6,7 @@ type Props = {
   children: ReactNode;
 };
 
-const Hero = ({ children }: Props) => (
+const Hero = ({ children }: Props): JSX.Element => (
   <div className={styles.hero}>
     <Container>{children}</Container>
   </div>

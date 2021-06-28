@@ -25,7 +25,7 @@ type Props = {
   onDarkModeChange: (darkMode: boolean) => void;
 };
 
-const Header = ({ title, darkMode, onDarkModeChange }: Props) => (
+const Header = ({ title, darkMode, onDarkModeChange }: Props): JSX.Element => (
   <div className={styles.root}>
     <header className={styles.header}>
       <a className={styles.title} href="/">

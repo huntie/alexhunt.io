@@ -1,5 +1,5 @@
 import type { GetStaticPaths, GetStaticProps } from 'next';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import type { BlockMapType } from 'react-notion';
 import ArticleHeader from '~components/ArticleHeader';
 import Container from '~components/Container';
@@ -11,6 +11,7 @@ import getPage from '~notion/getPage';
 
 type Props = {
   title: string;
+  summary: string;
   date: string;
   blockMap: BlockMapType;
 };
@@ -28,11 +29,12 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
   const { slug } = context.params;
 
   const pages = await getNotesPageMapping();
-  const { id, title, date } = pages['/notes/' + slug];
+  const { id, title, summary, date } = pages['/notes/' + slug];
 
   return {
     props: {
       title,
+      summary,
       date,
       blockMap: (await getPage(id)).block as BlockMapType,
     },
@@ -40,11 +42,20 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
   };
 };
 
-const NotePage = ({ title, date, blockMap }: Props): JSX.Element => (
+const NotePage = ({ title, summary, date, blockMap }: Props): JSX.Element => (
   <>
-    <Head>
-      <title>{title} | Alex Hunt</title>
-    </Head>
+    <NextSeo
+      title={title}
+      openGraph={{
+        type: 'article',
+        title,
+        description: summary,
+        article: {
+          section: 'Notes',
+          publishedTime: date,
+        },
+      }}
+    />
     <Layout>
       <article>
         <Container>

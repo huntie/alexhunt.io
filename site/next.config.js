@@ -12,4 +12,9 @@ module.exports = {
       },
     ];
   },
+  env: {
+    SITE_NAME: 'Alex Hunt',
+    SITE_URL: 'https://alexhunt.io',
+    TWITTER_HANDLE: '@alxhnt',
+  },
 };

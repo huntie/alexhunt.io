@@ -8,7 +8,7 @@ type Props = {
 /**
  * A layout container that horizontally bounds content within a page.
  */
-const Container = ({ children }: Props) => (
+const Container = ({ children }: Props): JSX.Element => (
   <div className={styles.container}>{children}</div>
 );
 

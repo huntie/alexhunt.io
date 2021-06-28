@@ -18,7 +18,7 @@ import 'prismjs/components/prism-php';
 import 'prismjs/components/prism-python';
 import 'prismjs/components/prism-typescript';
 
-const App = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return <Component {...pageProps} />;
 };
 

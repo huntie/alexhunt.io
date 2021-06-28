@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   };
 };
 
-const Home = ({ bio, notes }: Props) => (
+const Home = ({ bio, notes }: Props): JSX.Element => (
   <>
     <Head>
       <title>Alex Hunt – Software developer &amp; occasional writer</title>

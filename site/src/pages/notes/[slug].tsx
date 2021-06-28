@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps<Props> = async context => {
   };
 };
 
-const NotePage = ({ title, date, blockMap }: Props) => (
+const NotePage = ({ title, date, blockMap }: Props): JSX.Element => (
   <>
     <Head>
       <title>{title} | Alex Hunt</title>

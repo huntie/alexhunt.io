@@ -14,7 +14,7 @@ type Props = {
 /**
  * The root layout component for all pages.
  */
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }: Props): JSX.Element => {
   const darkMode = useDarkMode();
 
   return (

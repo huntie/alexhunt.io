@@ -15,7 +15,7 @@ type Props = {
   language?: string;
 };
 
-const Code = ({ code, language }: Props) => {
+const Code = ({ code, language }: Props): JSX.Element => {
   const hasClipboard = useHasClipboard();
   const codeRef = useRef<HTMLElement>();
   const [copied, setCopied] = useState(false);
@@ -58,7 +58,9 @@ const Code = ({ code, language }: Props) => {
   );
 };
 
-const CodeBlock = ({ blockValue }: CustomBlockComponentProps<'code'>) => {
+const CodeBlock = ({
+  blockValue,
+}: CustomBlockComponentProps<'code'>): JSX.Element => {
   if (blockValue.properties.title) {
     const content = blockValue.properties.title[0][0];
     const language = blockValue.properties.language[0][0]?.toLowerCase();

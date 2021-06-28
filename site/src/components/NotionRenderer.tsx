@@ -11,7 +11,7 @@ const mapImageUrl = (url: string) => {
 const NotionRenderer = ({
   customBlockComponents,
   ...props
-}: ComponentProps<typeof BaseNotionRenderer>) => (
+}: ComponentProps<typeof BaseNotionRenderer>): JSX.Element => (
   <BaseNotionRenderer
     {...props}
     mapImageUrl={mapImageUrl}

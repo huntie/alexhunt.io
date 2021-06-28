@@ -9,7 +9,7 @@ type Props = {
 /**
  * A stylised primary link element.
  */
-const UnderlineLink = ({ label, href }: Props) => (
+const UnderlineLink = ({ label, href }: Props): JSX.Element => (
   <a className={styles.link} href={href}>
     {label}
   </a>

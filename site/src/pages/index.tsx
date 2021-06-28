@@ -1,5 +1,5 @@
 import type { GetStaticProps } from 'next';
-import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 import type { BlockMapType } from 'react-notion';
 import { NotionRenderer } from 'react-notion';
 import Container from '~components/Container';
@@ -29,9 +29,10 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const Home = ({ bio, notes }: Props): JSX.Element => (
   <>
-    <Head>
-      <title>Alex Hunt – Software developer &amp; occasional writer</title>
-    </Head>
+    <NextSeo
+      titleTemplate="%s"
+      title="Alex Hunt – Software developer &amp; occasional writer"
+    />
     <Layout>
       <Hero>
         <NotionRenderer blockMap={bio} />

@@ -10,6 +10,7 @@ export type NotesPageMap = {
   [path: string]: {
     id: string;
     title: string;
+    summary: string;
     date: string;
   };
 };
@@ -38,11 +39,16 @@ const getNotesPageMapping = async (
     for (const id of collection.result.blockIds) {
       const {
         Name: title,
+        Summary: summary,
         Slug: slug,
         Published: published,
         Date: date,
       } = getPageProperties(collection, id);
 
+      invariant(
+        typeof summary === 'string',
+        'Expected page to have a Summary property'
+      );
       invariant(
         typeof slug === 'string',
         'Expected page to have a Slug property'
@@ -57,7 +63,7 @@ const getNotesPageMapping = async (
       );
 
       if (published) {
-        cache.setKey('/notes/' + slug, { id, title, date });
+        cache.setKey('/notes/' + slug, { id, title, summary, date });
       }
     }
 

@@ -46,6 +46,15 @@ const getNotesPageMapping = async (
       } = getPageProperties(collection, id);
 
       invariant(
+        typeof published === 'boolean',
+        'Expected page to have a Published property'
+      );
+
+      if (!published) {
+        continue;
+      }
+
+      invariant(
         typeof summary === 'string',
         'Expected page to have a Summary property'
       );
@@ -54,17 +63,11 @@ const getNotesPageMapping = async (
         'Expected page to have a Slug property'
       );
       invariant(
-        typeof published === 'boolean',
-        'Expected page to have a Published property'
-      );
-      invariant(
         typeof date === 'string',
         'Expected page to have a Date property'
       );
 
-      if (published) {
-        cache.setKey('/notes/' + slug, { id, title, summary, date });
-      }
+      cache.setKey('/notes/' + slug, { id, title, summary, date });
     }
 
     cache.save();

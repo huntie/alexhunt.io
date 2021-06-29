@@ -8,7 +8,7 @@
 
 # Build output
 /.cache
-/public/static/
+/public/static/*
 !/public/static/.gitkeep
 
 # Cache and log files

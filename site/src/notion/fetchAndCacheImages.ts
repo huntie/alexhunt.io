@@ -7,7 +7,7 @@ import ReactDOMServer from 'react-dom/server';
 import type { BlockMapType } from 'react-notion';
 import { defaultMapImageUrl, NotionRenderer } from 'react-notion';
 
-const STATIC_DIR = './public/static';
+const STATIC_DIR = path.join(process.cwd(), 'public/static');
 
 const getLocalFileName = (url: string) => {
   const imagePath = url.split('amazonaws.com/secure.notion-static.com/')[1];

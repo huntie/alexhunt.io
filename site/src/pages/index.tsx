@@ -9,6 +9,7 @@ import NotesList from '~components/NotesList';
 import type { NotesPageMap } from '~notion/getNotesPageMapping';
 import getNotesPageMapping from '~notion/getNotesPageMapping';
 import getPage from '~notion/getPage';
+import generateRssFeed from '~rss/generateRssFeed';
 
 const BIO_PAGE_ID = '3c84a17f3b1347c1ac8677d7b0037b43';
 
@@ -18,6 +19,8 @@ type Props = {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
+  await generateRssFeed();
+
   return {
     props: {
       bio: (await getPage(BIO_PAGE_ID)).block as BlockMapType,

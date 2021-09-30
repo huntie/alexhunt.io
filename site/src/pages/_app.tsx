@@ -20,17 +20,17 @@ import 'prismjs/components/prism-python';
 import 'prismjs/components/prism-typescript';
 
 const App = ({ Component, pageProps, router }: AppProps): JSX.Element => {
-  const canonicalUrl = process.env.SITE_URL + router.asPath;
+  const canonicalUrl = process.env.NEXT_PUBLIC_SITE_URL + router.asPath;
 
   return (
     <>
       <DefaultSeo
-        titleTemplate={`%s | ${process.env.SITE_NAME}`}
+        titleTemplate={`%s | ${process.env.NEXT_PUBLIC_SITE_NAME}`}
         canonical={canonicalUrl}
         openGraph={{
           type: 'website',
           url: canonicalUrl,
-          site_name: process.env.SITE_NAME,
+          site_name: process.env.NEXT_PUBLIC_SITE_NAME,
           locale: router.locale,
           profile: {
             firstName: 'Alex',
@@ -38,7 +38,7 @@ const App = ({ Component, pageProps, router }: AppProps): JSX.Element => {
           },
         }}
         twitter={{
-          handle: process.env.TWITTER_HANDLE,
+          handle: process.env.NEXT_PUBLIC_TWITTER_HANDLE,
           cardType: 'summary',
         }}
       />

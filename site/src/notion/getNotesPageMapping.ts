@@ -36,7 +36,10 @@ const getNotesPageMapping = async (
       NOTES_DATE_DESC_VIEW_ID
     );
 
-    for (const id of collection.result.blockIds) {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    for (const id of collection.result.reducerResults.collection_group_results
+      .blockIds) {
       const {
         Name: title,
         Summary: summary,
@@ -44,11 +47,6 @@ const getNotesPageMapping = async (
         Published: published,
         Date: date,
       } = getPageProperties(collection, id);
-
-      invariant(
-        typeof published === 'boolean',
-        'Expected page to have a Published property'
-      );
 
       if (!published) {
         continue;

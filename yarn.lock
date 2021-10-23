@@ -2590,28 +2590,28 @@ normalize-url@^4.1.0:
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-4.5.0.tgz#453354087e6ca96957bd8f5baf753f5982142129"
   integrity sha512-2s47yzUxdexf1OhyRi4Em83iQk0aPvwTddtFz4hnSSw9dCEsLEGf6SwIO8ss/19S9iBb5sJaOuTvTGDeZI00BQ==
 
-notion-client@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/notion-client/-/notion-client-4.3.2.tgz#1fa99b1ab1fdf9045e582cb2086e6fb2f0ba7f6d"
-  integrity sha512-RkX8FwwOh+o6UOaaFSpGhvf+CngcUi4ua3pxJD+0ph76bWvb9XU0hLSWN1fMlkqd3f5YedRoFrMbXsvfbgHZ3g==
+notion-client@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/notion-client/-/notion-client-4.10.0.tgz#bece50980f61b0f6ac2b954a58910a2068d40a58"
+  integrity sha512-0XRLUrWRjz4Ope07iUFgthMeZKm4AxNF4pILIBvcsUSGfpOcdY5r6b5b1dpkYdC3eNnXknK27YTDsUo08EhOUg==
   dependencies:
     got "^11.8.1"
-    notion-types "^4.3.0"
-    notion-utils "^4.3.0"
+    notion-types "^4.10.0"
+    notion-utils "^4.10.0"
     p-map "^4.0.0"
 
-notion-types@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.3.0.tgz#f69f968a82a15bfcb219ea9067e0f377f3e29a16"
-  integrity sha512-WAvrwmGCVMJI75mAssH7/ve1NVxkhyMmaVJbYp9b7+tbKs6MGYccbGPfR4QFLYcG9wGY3F4PQmlA3vjo4MSyhQ==
+notion-types@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/notion-types/-/notion-types-4.10.0.tgz#05c5006a021ab82f045c670e648a1749f2d1d9d1"
+  integrity sha512-+vGbzPCdPzunn6W8U/ugKCv6dP52FXSBHlS4ZeOtm4YeHxeXtglBeUDjTSsUix8+/j+aennL/YxzeeFEB0m5pQ==
 
-notion-utils@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.3.0.tgz#b815dd98120c9a2fd04a176eb2998005debe2012"
-  integrity sha512-gl5baxZJHt0SfG66bbP9eBoxRVAtxMTLcVlP1WtDtSVnB4Ye0edR/AfpRObZy08O/PGyMAV1kXN5cqxFdNRBwQ==
+notion-utils@^4.10.0:
+  version "4.10.0"
+  resolved "https://registry.yarnpkg.com/notion-utils/-/notion-utils-4.10.0.tgz#205049246a61c2968c8262327f9bae470b6092cd"
+  integrity sha512-ZTEJbR+LDOD+VnHjTwSCHO8JB9Hu/Arf6dmBZK3IptZCfDTzoVUEoPMvuME6fkPWtijk6+Rj9sVXY09ZxmACQQ==
   dependencies:
-    notion-types "^4.3.0"
-    p-queue "^6.6.1"
+    notion-types "^4.10.0"
+    p-queue "6"
 
 num2fraction@^1.2.2:
   version "1.2.2"
@@ -2750,7 +2750,7 @@ p-map@^4.0.0:
   dependencies:
     aggregate-error "^3.0.0"
 
-p-queue@^6.6.1:
+p-queue@6:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/p-queue/-/p-queue-6.6.2.tgz#2068a9dcf8e67dd0ec3e7a2bcb76810faa85e426"
   integrity sha512-RwFpb72c/BhQLEXIZ5K2e+AhgNVmIejGlTgiB9MzZ0e93GRvqZ7uSi0dvRF7/XIXDeNkra2fNHBxTyPDGySpjQ==

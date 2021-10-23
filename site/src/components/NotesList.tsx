@@ -9,7 +9,7 @@ type Props = {
 
 const NotesList = ({ notes }: Props): JSX.Element => {
   const grouped = groupBy(Object.entries(notes), ([_, { date }]) =>
-    date.slice(0, 4)
+    date.slice(0, 4),
   );
 
   return (

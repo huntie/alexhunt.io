@@ -63,7 +63,7 @@ const generateRssFeed = async (): Promise<void> => {
           contributor: [author],
           date: parseISO(data.date),
         };
-      })
+      }),
   );
   notesItems.forEach(feed.addItem);
 

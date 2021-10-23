@@ -14,7 +14,7 @@ const getLocalFileName = (url: string) => {
 
   invariant(
     typeof imagePath === 'string',
-    'Image URL did not match expected format'
+    'Image URL did not match expected format',
   );
 
   return imagePath.substring(0, 36) + path.extname(imagePath);
@@ -47,7 +47,7 @@ const fetchAndCacheImages = async (blockMap: BlockMapType) => {
         downloadUrls.push(defaultMapImageUrl(url, block));
         return '';
       },
-    })
+    }),
   );
 
   await Promise.all(
@@ -57,7 +57,7 @@ const fetchAndCacheImages = async (blockMap: BlockMapType) => {
       return !existingImages.has(fileName)
         ? downloadImage(downloadUrls[i], path.join(STATIC_DIR, fileName))
         : Promise.resolve();
-    })
+    }),
   );
 };
 

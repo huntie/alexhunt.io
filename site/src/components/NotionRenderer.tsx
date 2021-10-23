@@ -19,7 +19,7 @@ const NotionRenderer = ({
 
       return `${siteUrl}/static/${fileName}`;
     },
-    [absolutePaths]
+    [absolutePaths],
   );
 
   return (

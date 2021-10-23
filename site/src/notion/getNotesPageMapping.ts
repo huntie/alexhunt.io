@@ -21,7 +21,7 @@ export type NotesPageMap = {
  * `.cache` directory unless `clearCache` is set.
  */
 const getNotesPageMapping = async (
-  clearCache = false
+  clearCache = false,
 ): Promise<NotesPageMap> => {
   if (clearCache) {
     flatCache.clearAll();
@@ -33,7 +33,7 @@ const getNotesPageMapping = async (
     const notion = new NotionAPI();
     const collection = await notion.getCollectionData(
       NOTES_COLLECTION_ID,
-      NOTES_DATE_DESC_VIEW_ID
+      NOTES_DATE_DESC_VIEW_ID,
     );
 
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -54,15 +54,15 @@ const getNotesPageMapping = async (
 
       invariant(
         typeof summary === 'string',
-        'Expected page to have a Summary property'
+        'Expected page to have a Summary property',
       );
       invariant(
         typeof slug === 'string',
-        'Expected page to have a Slug property'
+        'Expected page to have a Slug property',
       );
       invariant(
         typeof date === 'string',
-        'Expected page to have a Date property'
+        'Expected page to have a Date property',
       );
 
       cache.setKey('/notes/' + slug, { id, title, summary, date });

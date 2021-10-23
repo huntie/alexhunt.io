@@ -12,7 +12,7 @@ type BasePageProps = {
  */
 const getPageProperties = (
   collection: CollectionInstance,
-  pageId: string
+  pageId: string,
 ): BasePageProps => {
   const collectionId = Object.keys(collection.recordMap.collection)[0];
   const schema = collection.recordMap.collection[collectionId].value.schema;
@@ -41,7 +41,7 @@ const getPageProperties = (
 
   invariant(
     typeof props.Name === 'string',
-    'Expected page to have a Name property'
+    'Expected page to have a Name property',
   );
 
   return props as BasePageProps;

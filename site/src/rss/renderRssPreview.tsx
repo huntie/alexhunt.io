@@ -10,7 +10,7 @@ const { i18n } = nextConfig;
 const renderRssPreview = (blockMap: BlockMapType, pageUrl: string): string => {
   invariant(
     i18n?.defaultLocale,
-    'i18n.defaultLocale must be set in next.config.js'
+    'i18n.defaultLocale must be set in next.config.js',
   );
 
   return ReactDOMServer.renderToStaticMarkup(
@@ -18,7 +18,7 @@ const renderRssPreview = (blockMap: BlockMapType, pageUrl: string): string => {
       <body>
         <RssContentPreview blockMap={blockMap} pageUrl={pageUrl} />
       </body>
-    </html>
+    </html>,
   );
 };
 

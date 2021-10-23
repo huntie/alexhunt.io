@@ -15,6 +15,6 @@ export const getCustomMediaConfig = () => ({
       ...acc,
       ['--breakpoint-' + key]: `(min-width: ${value}px)`,
     }),
-    {}
+    {},
   ),
 });

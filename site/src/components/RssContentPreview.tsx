@@ -12,7 +12,7 @@ const getPagePreview = mapValues<BlockType, BlockType>(block =>
           content: block.value.content.slice(0, 3),
         },
       }
-    : block
+    : block,
 );
 
 type Props = {

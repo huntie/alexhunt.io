@@ -18,8 +18,13 @@
   background: var(--color-code-background);
   font-family: var(--font-family-body);
   color: inherit;
-  opacity: 0.8;
+  opacity: 0;
   cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.copyButtonVisible {
+  opacity: 0.8;
 }
 
 .copyButton:hover {

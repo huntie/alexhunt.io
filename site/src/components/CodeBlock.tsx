@@ -3,7 +3,9 @@ import { highlight, languages } from 'prismjs';
 import { useCallback, useRef, useState } from 'react';
 import { Copy } from 'react-feather';
 import type { CustomBlockComponentProps } from 'react-notion';
+import useHover from 'react-use-hover';
 import useHasClipboard from '~hooks/useHasClipboard';
+import useMatchMedia from '~hooks/useMatchMedia';
 import styles from './CodeBlock.module.css';
 
 const languageOverrides = {
@@ -21,7 +23,10 @@ const Code = ({ code, language }: Props): JSX.Element => {
   const [copied, setCopied] = useState(false);
   const timerRef = useRef(null);
 
-  const langClass = language ? `language-${language}` : undefined;
+  const langClass =
+    language && language !== 'plain text'
+      ? `language-${language}`
+      : 'language-none';
 
   const handleClick = useCallback(async () => {
     clearTimeout(timerRef.current);
@@ -30,14 +35,24 @@ const Code = ({ code, language }: Props): JSX.Element => {
     timerRef.current = setTimeout(() => setCopied(false), 1000);
   }, []);
 
+  const hasPointer = useMatchMedia('(pointer:fine)');
+  const [hovered, hoverEvents] = useHover();
+  const clickable = !hasPointer || hovered;
+
   return (
     <div className={classNames('notion-code-root', styles.root)}>
-      <pre className={classNames('notion-code', styles.content, langClass)}>
+      <pre
+        className={classNames('notion-code', styles.content, langClass)}
+        {...hoverEvents}
+      >
         {hasClipboard ? (
           <button
-            className={styles.copyButton}
+            className={classNames(
+              styles.copyButton,
+              clickable ? styles.copyButtonVisible : null,
+            )}
             type="button"
-            onClick={handleClick}
+            onClick={clickable ? handleClick : undefined}
           >
             <Copy className={styles.copyIcon} />
             {copied ? 'Done!' : 'Copy'}

@@ -29,6 +29,9 @@
   --color-inline-code: var(--color-gruvbox-bright-red);
   --color-link-underline: var(--color-grey-lightest);
   --color-divider: var(--color-grey-lightest);
+
+  /* Transitions */
+  --transition-fast: 0.1s;
 }
 
 .dark-mode {

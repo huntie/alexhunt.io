@@ -10,9 +10,6 @@
     "url": "https://github.com/huntie/alexhunt.io",
     "directory": "site"
   },
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -26,22 +23,20 @@
     "feed": "^4.2.2",
     "flat-cache": "^3.0.4",
     "invariant": "^2.2.4",
-    "next": "^11.0.0",
+    "next": "^13.1.6",
     "next-seo": "^4.26.0",
     "notion-client": "^4.10.0",
     "notion-utils": "^4.10.0",
     "prism-themes": "^1.6.0",
     "prismjs": "^1.24.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-feather": "^2.0.9",
     "react-notion": "^0.9.3",
     "react-use-hover": "^2.0.0",
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.13.10",
-    "@babel/register": "^7.13.8",
     "@types/classnames": "^2.3.1",
     "@types/flat-cache": "^2.0.0",
     "@types/invariant": "^2.2.34",
@@ -50,7 +45,6 @@
     "@types/prismjs": "^1.16.5",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
-    "babel-loader": "^8.2.2",
     "eslint": "^7.22.0",
     "postcss-custom-media": "^8.0.0",
     "postcss-preset-env": "^6.7.0",

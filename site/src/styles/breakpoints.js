@@ -1,7 +1,7 @@
 /**
  * The mobile-up responsive breakpoint widths for the site in px.
  */
-export const breakpoints = {
+const breakpoints = {
   sm: 480,
   md: 768,
 };
@@ -9,7 +9,7 @@ export const breakpoints = {
 /**
  * Entry point for postcss-custom-media.
  */
-export const getCustomMediaConfig = () => ({
+const getCustomMediaConfig = () => ({
   customMedia: Object.entries(breakpoints).reduce(
     (acc, [key, value]) => ({
       ...acc,
@@ -18,3 +18,8 @@ export const getCustomMediaConfig = () => ({
     {},
   ),
 });
+
+module.exports = {
+  breakpoints,
+  getCustomMediaConfig,
+};

@@ -1,7 +1,3 @@
-require('@babel/register')({
-  extensions: ['.ts'],
-});
-
 const { getCustomMediaConfig } = require('./src/styles/breakpoints');
 
 module.exports = {

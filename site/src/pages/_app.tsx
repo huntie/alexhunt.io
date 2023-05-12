@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { AppProps } from 'next/app';
 import { DefaultSeo } from 'next-seo';
 
@@ -43,6 +44,7 @@ const App = ({ Component, pageProps, router }: AppProps): JSX.Element => {
         }}
       />
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 };
